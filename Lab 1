@@ -1,0 +1,44 @@
+package LearningJava;
+import java.util.Scanner;
+
+public class Project {
+
+  public static void main(String args[]) {
+	Scanner scnr = new Scanner (System.in);
+    boolean finalOutput = false;
+    int num1;
+    int num2;
+    int sumFirst;
+    int sumMiddle;
+    int sumLast;
+
+    // User input to get a number.
+    System.out.println("Enter a number.");
+    num1 = scnr.nextInt();
+    // User input to get the second number with the same number of digits.
+    System.out.println("Enter a number with the same amount of digits as the first.");
+    num2 = scnr.nextInt();
+
+    // adding the first digit
+    sumFirst = (num1/100) % 10 + (num2/100) % 10;
+
+    // adding the middle digit
+    sumMiddle = (num1/10) % 10 + (num2/10) % 10;
+
+    // adding the last digits
+    sumLast = (num1 % 10) + (num2 % 10);
+
+
+    // if the ones, tens, and hundreds spots are the same: true
+    if (sumFirst == sumMiddle) {
+    }
+    if (sumMiddle == sumLast) {
+    System.out.print("True");
+    }
+    // if the ones, tens, and hundreds spots are different: false
+    else {
+    System.out.println("False");
+    }
+  }
+}
+
